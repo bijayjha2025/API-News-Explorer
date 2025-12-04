@@ -1,0 +1,31 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.categoryDisplay{
+  text-align: center;
+  color: rgb(60, 59, 59);
+}
+
+.navbar{
+  display: flex;
+  gap: 10px;
+  padding: 15px;
+  justify-content: center;
+  background: rgb(rgb(248, 193, 193), rgb(185, 248, 185), rgb(129, 129, 244));
+}
+
+.buttons{
+  cursor: pointer;
+  padding: 8px 12px;
+  border: 1px solid rgb(74, 73, 73);
+  border-radius: 8px;
+  background: rgb(245, 243, 243);
+  font-size: 15px;
+  font-weight: 500;
+  transition: 0.2s ease;
+  
+}
