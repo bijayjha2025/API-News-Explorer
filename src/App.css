@@ -15,7 +15,7 @@
   gap: 10px;
   padding: 15px;
   justify-content: center;
-  background: rgb(rgb(248, 193, 193), rgb(185, 248, 185), rgb(129, 129, 244));
+  background: linear-gradient(to right, rgb(248, 193, 193), rgb(185, 248, 185), rgb(129, 129, 244));
 }
 
 .buttons{

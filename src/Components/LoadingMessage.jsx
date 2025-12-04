@@ -2,8 +2,7 @@
 function LoadingMessage(){
     return(
         <>
-        Loading message here....
-        
+        <p>Loading message here....</p>
         </>
 
     );

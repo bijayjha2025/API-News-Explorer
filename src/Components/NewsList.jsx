@@ -1,8 +1,13 @@
 
-function NewsList(){
+import NewsCard from "./NewsCard.jsx";
+
+function NewsList({articles}){
     return(
-        <>It will have list of news.
-        </>
+        <div>
+          {articles.map((item, index) => (
+          <NewsCard key={item.url || index} article={item} />
+         ))}
+        </div>
 
     );
 }
