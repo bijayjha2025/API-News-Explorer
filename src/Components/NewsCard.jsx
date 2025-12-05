@@ -4,7 +4,11 @@ function NewsCard({article}){
 
     return(
       <div className="newsCard">
-       <img src={urlToImage || 'https://via.placeholder.com/400x200?text=No+Image'} alt={title} className="newsImage" />
+       <img
+         src={urlToImage || "https://via.placeholder.com/400x250?text=No+Image"}
+         alt={title}
+         className="newsImage"/>
+
 
        <h3>{title}</h3>
        <p>{description}</p>
@@ -12,7 +16,7 @@ function NewsCard({article}){
        <a 
          href={url} 
          target="_blank" 
-         rel="noopener noreferrer"
+         rel="abcsd cadfac"
       >
          Read More
        </a>

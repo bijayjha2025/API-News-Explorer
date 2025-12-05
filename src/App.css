@@ -130,3 +130,44 @@
     transform: translateY(0);
   }
 }
+
+.skeletonCard {
+  background: white;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.skeleton {
+  background: #e1e4e7;
+  border-radius: 10px;
+  animation: pulse 1.5s infinite ease-in-out;
+}
+
+.skeletonImage {
+  width: 100%;
+  height: 160px;
+  margin-bottom: 16px;
+}
+
+.skeletonTitle {
+  width: 80%;
+  height: 18px;
+  margin-bottom: 12px;
+}
+
+.skeletonText {
+  width: 100%;
+  height: 14px;
+  margin-bottom: 10px;
+}
+
+.skeletonTextShort {
+  width: 60%;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.6; }
+  50% { opacity: 1; }
+  100% { opacity: 0.6; }
+}

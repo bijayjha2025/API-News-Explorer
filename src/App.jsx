@@ -5,6 +5,7 @@ import NewsList from './Components/NewsList.jsx';
 import ErrorMessage from './Components/ErrorMessage.jsx';
 import LoadingMessage from './Components/LoadingMessage.jsx';
 import './App.css'
+import Skeleton from './Components/Skeleton.jsx';
 
 
 function App() {
@@ -48,12 +49,20 @@ function App() {
      <NavBar onCategoryChange = {setCategory}/>
       <h2 className='categoryDisplay'>Category: {category.charAt(0).toUpperCase() + category.slice(1)}</h2>
 
-      {loading && <LoadingMessage />}
-      {error && <ErrorMessage message= {error}/>}
+      {loading && (
+        <div className='skeletonContainer'>
+          {Array.from({ length: 6}).map((_, i)=>(
 
+            <Skeleton key={i}/>
+          ))}
+        </div>
+      )}
+
+      {error && <ErrorMessage message={error} />}
       {!loading && !error && <NewsList articles={news} />}
-
+      
     </div>
+      
   );
 }
 
