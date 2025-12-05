@@ -2,7 +2,7 @@
 function ErrorMessage({message}){
     return(
         <>
-        <p>{message}</p>
+        <p className="errorText">{message}</p>
         </>
 
     );

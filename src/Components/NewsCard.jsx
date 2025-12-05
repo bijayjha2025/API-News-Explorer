@@ -3,7 +3,7 @@ function NewsCard({article}){
     const { title, description, url, urlToImage } = article;
 
     return(
-      <div>
+      <div className="newsCard">
        <img src={urlToImage || 'https://via.placeholder.com/400x200?text=No+Image'} alt={title} className="newsImage" />
 
        <h3>{title}</h3>

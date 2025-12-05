@@ -2,7 +2,7 @@
 function LoadingMessage(){
     return(
         <>
-        <p>Loading message here....</p>
+        <p className="loadingText">Loading message here....</p>
         </>
 
     );
