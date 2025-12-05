@@ -66,6 +66,7 @@
   transition: 0.35s;
   cursor: pointer;
   border-top: 6px solid hsl(212, 100%, 77%);
+  animation: fadeIn 0.5s ease;
 }
 
 .newsCard:hover {
@@ -117,4 +118,15 @@
   padding: 20px;
   color: red;
   font-weight: bold;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
