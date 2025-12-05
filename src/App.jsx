@@ -6,6 +6,7 @@ import ErrorMessage from './Components/ErrorMessage.jsx';
 import LoadingMessage from './Components/LoadingMessage.jsx';
 import './App.css'
 import Skeleton from './Components/Skeleton.jsx';
+import Footer from './Components/Footer.jsx';
 
 
 function App() {
@@ -61,6 +62,7 @@ function App() {
       {error && <ErrorMessage message={error} />}
       {!loading && !error && <NewsList articles={news} />}
       
+      <Footer/>
     </div>
       
   );

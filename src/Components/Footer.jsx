@@ -1,10 +1,10 @@
 
 function Footer(){
     return(
-      <footer>
+      <footer className="footerSection">
        <p>© {new Date().getFullYear()} News Explorer_NewsAsTreasure. All rights reserved.</p>
        <p>Bijay</p>
-       <p>News powered by <a href="https://newsapi.org/" target="_blank" rel="....">NewsAPI.org</a></p>
+       <p>News powered by <b>NewsAPI.org</b></p>
     </footer>
     );
 }
