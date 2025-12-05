@@ -46,7 +46,7 @@ function App() {
   return (
    <div>
      <NavBar onCategoryChange = {setCategory}/>
-      <h2 className='categoryDisplay'>Category: {category} </h2>
+      <h2 className='categoryDisplay'>Category: {category.charAt(0).toUpperCase() + category.slice(1)}</h2>
 
       {loading && <LoadingMessage />}
       {error && <ErrorMessage message= {error}/>}

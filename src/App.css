@@ -11,14 +11,16 @@
 .categoryDisplay{
   text-align: center;
   color: rgb(60, 59, 59);
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin: 20px 0;
 }
 
 .navbar{
   display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 15px 20px;
-  justify-content: flex-start;
+  gap: 12px;
+  padding: 15px;
+  justify-content: center;
   background: linear-gradient(to right, rgb(248, 193, 193), rgb(185, 248, 185), rgb(129, 129, 244));
   box-shadow: 0 3px 10px rgba(0,0,0,0.1);
   margin-bottom: 25px;
@@ -26,63 +28,81 @@
 
 .buttons{
   cursor: pointer;
-  padding: 8px 14px;
+  padding: 10px 18px;
   margin-right: 10px;
-  border: 1px solid rgb(74, 73, 73);
-  border-radius: 5px;
+  border: 2px solid rgb(74, 73, 73);
+  border-radius: 25px;
   background: rgb(245, 243, 243);
   font-size: 15px;
   font-weight: 500;
-  transition: 0.2s ease;
+  transition: 0.3s ease;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
   
 }
 
 .buttons:hover{
-  background: #769ff6;
+  background: hsl(211, 100%, 95%);
+  border-color: hsl(212, 100%, 50%);
+}
+
+.buttons.active {
+  background: rgb(0, 119, 255);
+  color: white;
+  border-color: hsl(212, 100%, 50%);
 }
 
 .newsList{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  padding: 5px;
 }
 
 .newsCard {
   background: white;
-  padding: 15px;
-  border-radius: 10px;
-  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
-  transition: 0.25s ease;
+  padding: 18px;
+  border-radius: 18px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: 0.35s;
   cursor: pointer;
+  border-top: 6px solid hsl(212, 100%, 77%);
 }
 
 .newsCard:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
 }
 
 .newsCard img {
   width: 100%;
-  height: 160px;
+  height: 180px;
   object-fit: cover;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
 .newsCard h3 {
   font-size: 1.1rem;
   margin-bottom: 8px;
+  color: hsl(0, 0%, 20%);
+  font-weight: 600;
 }
 
 .newsCard p {
   font-size: 0.95rem;
   margin-bottom: 12px;
   line-height: 1.4;
+  color: hsl(0, 0%, 33%);
 }
 
 .newsCard a {
   text-decoration: none;
   color: #0056ff;
   font-weight: bold;
+}
+
+.newsCard a:hover {
+  text-decoration: underline;
 }
 
 .loadingText {
