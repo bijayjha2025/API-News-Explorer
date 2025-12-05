@@ -18,34 +18,53 @@
 
 .navbar{
   display: flex;
-  gap: 12px;
-  padding: 15px;
-  justify-content: center;
-  background: linear-gradient(to right, rgb(248, 193, 193), rgb(185, 248, 185), rgb(129, 129, 244));
-  box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-  margin-bottom: 25px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.buttons{
+.navbar .mainLogo {
+  width: 200px;
+  height: auto;
+  object-fit: contain;
   cursor: pointer;
-  padding: 10px 18px;
-  margin-right: 10px;
-  border: 2px solid rgb(74, 73, 73);
-  border-radius: 25px;
-  background: rgb(245, 243, 243);
-  font-size: 15px;
-  font-weight: 500;
-  transition: 0.3s ease;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  transition: transform 0.3s ease;
   
 }
 
-.buttons:hover{
+.mainLogo:hover {
+  box-shadow: 0 4px 15px rgba(0, 119, 255, 0.4);
+  transform: scale(1.01);
+  transition: all 0.3s ease;
+}
+
+.navbarButtons{
+  display: flex;
+  gap: 12px;
+}
+
+.navbarButtons button{
+  border: 2px solid skyblue;
+  background: rgb(245, 243, 243);
+  padding: 10px 18px;
+  border-radius: 25px;
+  color: #01060b;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.navbarButtons button:hover{
   background: hsl(211, 100%, 95%);
   border-color: hsl(212, 100%, 50%);
 }
 
-.buttons.active {
+.navbarButtons button.active {
   background: rgb(0, 119, 255);
   color: white;
   border-color: hsl(212, 100%, 50%);
