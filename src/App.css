@@ -205,3 +205,24 @@
 .footerSection p {
   font-size: 14px;
 }
+
+.searchBox{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.searchInput{
+  padding: 10px 14px;
+  border-radius: 25px;
+  border: 2px solid skyblue;
+  outline: none;
+  font-size: 16px;
+  width: 220px;
+  transition: 0.3s;
+}
+
+.searchInput:focus {
+  border-color: hsl(212, 100%, 50%);
+  box-shadow: 0 0 6px rgba(0, 119, 255, 0.4);
+}
