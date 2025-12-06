@@ -55,7 +55,7 @@ function App() {
       setError("");
       setSearchMode(true);
 
-      setDisplayText(`Search: ${query}`);
+      setDisplayText(query);
 
       const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${import.meta.env.VITE_NEWS_API}`;
       const response = await fetch(url);
@@ -86,7 +86,9 @@ function App() {
   return (
    <div>
      <NavBar onCategoryChange = {handleCategoryChange} onSearchNews={handleSearch}/>
-      <h2 className='categoryDisplay'>Category: {displayText.charAt(0).toUpperCase() + displayText.slice(1)}</h2>
+      <h2 className='categoryDisplay'>
+        {searchMode ? ("Result for: " + displayText) : "Category: " + displayText.charAt(0).toUpperCase() + displayText.slice(1)}
+        </h2>
 
       {loading && (
         <div className='skeletonContainer'>
