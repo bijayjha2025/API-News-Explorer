@@ -16,6 +16,8 @@ function App() {
   const [news, setNews] = useState([]);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [searchMode, setSearchMode] = useState(false);
+  const [displayText, setDisplayText] = useState("general");
 
   useEffect(() => {
     const fetchNews = async () => {
@@ -42,13 +44,49 @@ function App() {
       }
     };
 
-    fetchNews();
-  }, [category]);
+    if(!searchMode){
+      fetchNews();
+    }
+  }, [category, searchMode]);
+
+  const handleSearch = async (query) => {
+    try {
+      setLoading(true);
+      setError("");
+      setSearchMode(true);
+
+      setDisplayText(`Search: ${query}`);
+
+      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${import.meta.env.VITE_NEWS_API}`;
+      const response = await fetch(url);
+      const data = await response.json();
+
+      if (data.status !== "ok") {
+        throw new Error("Unable to fetch search results");
+      }
+
+      setNews(data.articles);
+    }
+    catch (err) {
+      setError(err.message);
+      setNews([]);
+    }
+    finally {
+      setLoading(false);
+    }
+  };
+
+  const handleCategoryChange = (newCategory) => {
+    setCategory(newCategory);
+    setSearchMode(false);
+
+    setDisplayText(newCategory);
+  };
 
   return (
    <div>
-     <NavBar onCategoryChange = {setCategory}/>
-      <h2 className='categoryDisplay'>Category: {category.charAt(0).toUpperCase() + category.slice(1)}</h2>
+     <NavBar onCategoryChange = {handleCategoryChange} onSearchNews={handleSearch}/>
+      <h2 className='categoryDisplay'>Category: {displayText.charAt(0).toUpperCase() + displayText.slice(1)}</h2>
 
       {loading && (
         <div className='skeletonContainer'>
