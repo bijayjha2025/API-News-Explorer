@@ -29,7 +29,7 @@ function NavBar({onCategoryChange, onSearchNews}){
                 onChange={(e)=> setSearchQuery(e.target.value)}
                 onKeyPress = {handleKeyPress}
                 className="searchInput"></input>
-                <button onClick={handleClickSearch} className="searchButton">Search</button>
+                <button onClick={handleClickSearch} className="searchButton"><img src='./search.png' alt ='searchIcon' className='searchIcon'></img></button>
             </div>
 
             <div className="navbarButtons">

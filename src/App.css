@@ -226,3 +226,34 @@
   border-color: hsl(212, 100%, 50%);
   box-shadow: 0 0 6px rgba(0, 119, 255, 0.4);
 }
+
+.searchButton{
+  padding: 10px 18px;
+  border: 2px solid skyblue;
+  border-radius: 25px;
+  background: rgb(245, 243, 243);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.searchButton:hover {
+  background: hsl(211, 100%, 95%);
+  border-color: hsl(212, 100%, 50%);
+}
+
+.searchIcon{
+  width: 18px;
+  height: 18px;
+}
+
+.searchButton:hover .searchIcon {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+  transition: transform 0.2s, filter 0.2s;
+}
+
+.searchButton:active .searchIcon {
+  transform: scale(0.95);
+  filter: brightness(1);
+  transition: transform 0.1s, filter 0.1s;
+}

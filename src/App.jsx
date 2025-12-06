@@ -100,7 +100,12 @@ function App() {
       )}
 
       {error && <ErrorMessage message={error} />}
-      {!loading && !error && <NewsList articles={news} />}
+      {!loading && !error && news.length === 0 && (
+        <p className="loadingText">No news found</p>
+        )}
+
+{!loading && !error && news.length > 0 && <NewsList articles={news} />}
+
       
       <Footer/>
     </div>
