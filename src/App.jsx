@@ -19,14 +19,15 @@ function App() {
   const [searchMode, setSearchMode] = useState(false);
   const [displayText, setDisplayText] = useState("general");
 
+  const CORS_PROXY = 'https://corsproxy.io/?';
+
   useEffect(() => {
     const fetchNews = async () => {
       try {
         setLoading(true);
         setError("");
 
-        const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;
-
+        const apiUrl = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;const url = CORS_PROXY + encodeURIComponent(apiUrl);
 
         const response = await fetch(url);
         const data = await response.json();
@@ -59,7 +60,8 @@ function App() {
 
       setDisplayText(query);
 
-      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;
+      const apiUrl = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;
+      const url = CORS_PROXY + encodeURIComponent(apiUrl);
 
       const response = await fetch(url);
       const data = await response.json();
