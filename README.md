@@ -1,6 +1,7 @@
 React News App
 
-A simple React application that fetches news from a public API and displays it dynamically. Users can search for articles, filter by categories, and expand articles to read more.
+A simple React application that fetches news from a public API and displays it dynamically.
+Users can search for articles, filter by categories, and expand articles to read more.
 
 Features
 Fetch latest news from a public API
@@ -17,7 +18,6 @@ Conditional rendering for loading states and Read More toggle
 Handling errors and dynamic data updates
 
 How to Run
-
 Clone the repository:
 git clone https://github.com/bijayjha2025/API-News-Explorer/
 
