@@ -25,11 +25,13 @@ function App() {
         setLoading(true);
         setError("");
 
-        const url = `https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_NEWS_API}`;
+        const url = `https://gnews.io/api/v4/top-headlines?category=${category}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;
+
+
         const response = await fetch(url);
         const data = await response.json();
 
-        if (data.status !== "ok") {
+        if (!data.articles) {
           throw new Error("Unable to fetch news");
         }
 
@@ -57,11 +59,12 @@ function App() {
 
       setDisplayText(query);
 
-      const url = `https://newsapi.org/v2/everything?q=${encodeURIComponent(query)}&apiKey=${import.meta.env.VITE_NEWS_API}`;
+      const url = `https://gnews.io/api/v4/search?q=${encodeURIComponent(query)}&lang=en&country=us&apikey=${import.meta.env.VITE_GNEWS_API}`;
+
       const response = await fetch(url);
       const data = await response.json();
 
-      if (data.status !== "ok") {
+      if (!data.articles) {
         throw new Error("Unable to fetch search results");
       }
 

@@ -4,7 +4,7 @@ function Footer(){
       <footer className="footerSection">
        <p>© {new Date().getFullYear()} News Explorer_NewsAsTreasure. All rights reserved.</p>
        <p>Bijay</p>
-       <p>News powered by <b>NewsAPI.org</b></p>
+       <p>News powered by <b>GNewsAPI.io</b></p>
     </footer>
     );
 }
