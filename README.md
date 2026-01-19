@@ -61,5 +61,3 @@ API-News-Explorer/
 ## Author
 - Bijay Jha
 - https://github.com/bijayjha2025/ (Github)
-Start the development server:
-npm start
