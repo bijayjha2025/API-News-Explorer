@@ -3,15 +3,6 @@ NewsAsTreasure is a frontend-only React application that fetches and displays ne
 
 This project focuses on React fundamentals, API integration, state management, and UI rendering, without any custom backend.
 
-## Screenshots
-
-### Default Page
-![Default Page](public/Screenshot 2026-01-19 194438.png)
-
-
-### Category Searched
-![Category Searched](public/Screenshot 2026-01-19 194657.png)
-
 ## Features
 - Fetch latest news from a public API
 - Search news by keywords
